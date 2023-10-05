@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite"
 
 const TodoCreator = () => {
     const todoStore = useContext(StoreContext);
-    const [newTodo, setNew] = useState('');
+    const [newTodo, setNewTodo] = useState('');
 
     const handleAddTodo = () => {
         if(newTodo.trim()){
@@ -17,7 +17,7 @@ const TodoCreator = () => {
             <input
             type="text"
             value={newTodo}
-            onChange={e => setNewTodo(e.target.value)}
+            onChange={e=>setNewTodo(e.target.value)}
             placeholder="Digite uma nova tarefa"
             />
             <button onClick={handleAddTodo}>Add Tarefa</button>
